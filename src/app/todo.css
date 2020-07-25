@@ -22,6 +22,6 @@
   outline: none;
 }
 
-.kbd-navigation .square:focus {
+.kbd-navigation .todo-check:focus {
   background: #ddd;
 }
