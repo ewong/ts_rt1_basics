@@ -1,11 +1,11 @@
 import React from "react";
 import "./todolist.css";
 import { Todo } from "./todo";
-import { AddTodo } from "./addtodo";
 
 interface IProps {}
 
 interface IState {
+  value: string;
   todos: Array<String>;
 }
 
@@ -13,15 +13,16 @@ class TodoList extends React.Component<IProps, IState> {
   constructor(props: IProps) {
     super(props);
     this.state = {
+      value: "",
       todos: [],
     };
   }
 
-  addTodo(value: string) {
+  addTodo() {
+    if (this.state.value.length === 0) return;
     const todos = this.state.todos.slice();
-    console.log(todos.length);
     if (todos.length >= 9) return;
-    todos.push(value);
+    todos.push(this.state.value);
     this.setState({ todos });
   }
 
@@ -35,7 +36,22 @@ class TodoList extends React.Component<IProps, IState> {
     return (
       <div>
         <div>TodoList</div>
-        <AddTodo onClick={this.addTodo.bind(this)}></AddTodo>
+        <form
+          onSubmit={(e) => {
+            e.preventDefault();
+            this.addTodo();
+          }}
+        >
+          <input
+            className="add-todo-text"
+            type="text"
+            name="todo"
+            onChange={(e) => {
+              this.setState({ value: e.target.value });
+            }}
+          />
+          <input className="add-todo-button" type="submit" value="Add" />
+        </form>
         {this.state.todos.map((value, index) => {
           return (
             <Todo

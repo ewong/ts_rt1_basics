@@ -1,12 +1,12 @@
 import React from "react";
 import './todo.css';
 
-interface Props {
+interface IProps {
   value: String;
   onClick: () => void;
 }
 
-export const Todo: React.FC<Props> = ({ value, onClick }) => {
+export const Todo: React.FC<IProps> = ({ value, onClick }) => {
   return (
     <div className="todo">
       <button className="todo-check" onClick={() => onClick()}></button>

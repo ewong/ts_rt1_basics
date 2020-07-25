@@ -1,18 +1,24 @@
-/* .board-row:after {
-  clear: both;
-  content: "";
-  display: table;
+.add-todo {
+  line-height: 15px;
+  background-color: gray;
+  text-align: left;
+  font-size: 15px;
+  margin: 5px 0 5px 0;
 }
 
-.status {
-  margin-bottom: 10px;
+.add-todo-text {
+  float: left;
+  margin-right: 5px;
+  margin-top: 2px;
 }
 
-.game {
-  display: flex;
-  flex-direction: row;
+.add-todo-button {
+  font-weight: bold;
+  background: #fff;
+  border: 1px solid #999;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  height: 18px;
+  width: 40px;
 }
-
-.game-info {
-  margin-left: 20px;
-} */
