@@ -17,11 +17,3 @@
   height: 15px;
   width: 15px;
 }
-
-.todo-check:focus {
-  outline: none;
-}
-
-.kbd-navigation .todo-check:focus {
-  background: #ddd;
-}
