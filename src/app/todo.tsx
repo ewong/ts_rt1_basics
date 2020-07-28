@@ -10,7 +10,7 @@ export const Todo: React.FC<IProps> = ({ value, onClick }) => {
   return (
     <div className="todo">
       <button className="todo-check" onClick={() => onClick()}></button>
-      <div className="todo-value">{value}</div>
+      <div>{value}</div>
     </div>
   );
 };
